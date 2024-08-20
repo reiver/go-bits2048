@@ -116,8 +116,12 @@ func TestString_GoString(t *testing.T) {
 			Expected:`bits2048.MustFromString("Hi! 🙂")`,
 		},
 		{
-			String           : MustFromString("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"),
+			String:            MustFromString("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"),
 			Expected:`bits2048.MustFromString("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")`,
+		},
+		{
+			String:            MustFromString("ODzCIi2TFDU3AVtJXzQt6BgVwrMu0Q6gxAyzvjqblfXMkL73aunbukkEdMPn9QHntlI0B3oMDKhcsEvQIDuzUXPev1aMRAPJCs6x5GVnHTuv8SOfbv07e2RU61q6R8OAxA02y3bjyGbLoMbzQjlsZAAWhgeB9KW8hIgeyo7eWnZrqTmpkQxXszjdqT6Zh7SEijpnuGfk28XmuSjlsBOyA4sfMYpwUZg48uliDpkXJWdT3aR3atqyMJQm3NwCR51"),
+			Expected:`bits2048.MustFromString("ODzCIi2TFDU3AVtJXzQt6BgVwrMu0Q6gxAyzvjqblfXMkL73aunbukkEdMPn9QHntlI0B3oMDKhcsEvQIDuzUXPev1aMRAPJCs6x5GVnHTuv8SOfbv07e2RU61q6R8OAxA02y3bjyGbLoMbzQjlsZAAWhgeB9KW8hIgeyo7eWnZrqTmpkQxXszjdqT6Zh7SEijpnuGfk28XmuSjlsBOyA4sfMYpwUZg48uliDpkXJWdT3aR3atqyMJQm3NwCR51")`,
 		},
 	}
 
