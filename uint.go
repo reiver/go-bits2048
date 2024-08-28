@@ -35,6 +35,35 @@ func MustFromUint64s(values ...uint64) Uint {
 	return result
 }
 
+// Cmp compared 'receiver' and 'other', and —
+//
+// It returns 0 if 'receiver' and 'other' are equal.
+// It return -1 if 'receiver' is less-than 'other'.
+// And it return 1 if 'receiver' is greater-than 'other'.
+func (receiver *Uint) Cmp(other *Uint) int {
+	if receiver == other {
+		return 0
+	}
+	if *receiver == *other {
+		return 0
+	}
+
+	var length int =len(receiver.value)
+	for i:=(length-1); i>=0; i-- {
+		n1 := receiver.value[i]
+		n2 := other.value[i]
+
+		switch {
+		case n1 < n2:
+			return -1
+		case n1 > n2:
+			return 1
+		}
+	}
+
+	return 0
+}
+
 func (receiver *Uint) Add(src1 *Uint, src2 *Uint) error {
 	if nil == receiver {
 		return errNilReceiver
